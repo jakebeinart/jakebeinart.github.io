@@ -1,0 +1,83 @@
+
+*** These modified files were found in JOE when it aborted on Thu Sep 24 11:52:30 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '/nethome/users/jsb8bd/test/jakebeinart.github.io/.git/COMMIT_EDITMSG'
+test commit
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: Jake Beinart <jsb8bd@rc11xcs213.managed.mst.edu>
+#
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   index.html
+#
+# Untracked files:
+#	css/
+#	fonts/
+#	js/
+#
+
+*** File '(Unnamed)'
+largetester.cpp
+largetester.cpp
+arraylist.hpp
+arraylist.hpp
+linkedlist.h
+linkedlist.h
+tester.cpp
+tester.cpp
+linkedlist.hpp
+linkedlist.hpp
+/nethome/users/jsb8bd/test/jakebeinart.github.io/.git/COMMIT_EDITMSG
+
+*** These modified files were found in JOE when it aborted on Thu Sep 24 12:00:49 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '/nethome/users/jsb8bd/test/jakebeinart.github.io/.git/COMMIT_EDITMSG'
+Install Sectionalize bootstrap theme
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: Jake Beinart <jsb8bd@rc11xcs213.managed.mst.edu>
+#
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   css/bootstrap-theme.css
+#	new file:   css/bootstrap-theme.css.map
+#	new file:   css/bootstrap-theme.min.css
+#	new file:   css/bootstrap.css
+#	new file:   css/bootstrap.css.map
+#	new file:   css/bootstrap.min.css
+#	new file:   css/styles.css
+#	new file:   fonts/glyphicons-halflings-regular.eot
+#	new file:   fonts/glyphicons-halflings-regular.svg
+#	new file:   fonts/glyphicons-halflings-regular.ttf
+#	new file:   fonts/glyphicons-halflings-regular.woff
+#	new file:   fonts/glyphicons-halflings-regular.woff2
+#	modified:   index.html
+#	new file:   js/bootstrap.js
+#	new file:   js/bootstrap.min.js
+#	new file:   js/npm.js
+#	new file:   js/scripts.js
+#
+# Untracked files:
+#	DEADJOE
+#	js/jquery-2.1.4.min.js
+*** File '(Unnamed)'
+largetester.cpp
+largetester.cpp
+arraylist.hpp
+arraylist.hpp
+linkedlist.h
+linkedlist.h
+tester.cpp
+tester.cpp
+linkedlist.hpp
+linkedlist.hpp
+/nethome/users/jsb8bd/test/jakebeinart.github.io/.git/COMMIT_EDITMSG

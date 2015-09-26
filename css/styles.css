@@ -75,13 +75,13 @@ a.list-group-item.active,[class*='-info'] {
 }
 
 #section4 {
-	background-color: #fff;
-    color:#444;
+	background-color: #e5e5ef;
+    color:#dedeff;
 }
 
 #section5,#section7,#section7 a {
 	background-color: #168ccc;
-    color:#fff;
+    color:#ddd;
 }
 
 

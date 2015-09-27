@@ -113,5 +113,5 @@ footer .nav>li>a:hover {
     /* reset the text-align */
     text-align:left;
     /* inline-block space fix */
-    margin-right:-4px;
+    margin-right:50px;
 }

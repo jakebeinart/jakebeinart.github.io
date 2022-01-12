@@ -177,6 +177,7 @@ address {
 ol,
 ul {
   padding-left: 2rem;
+  list-style: outside none none;
 }
 
 ol,
@@ -491,6 +492,11 @@ progress {
 
 .lead {
   font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.skills-lead {
+  font-size: 1.9rem;
   font-weight: 300;
 }
 

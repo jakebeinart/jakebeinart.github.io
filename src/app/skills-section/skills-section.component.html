@@ -1,0 +1,19 @@
+<div class="container">
+    <!-- About Section Heading-->
+    <h2 class="page-section-heading text-center text-uppercase text-white">Skills</h2>
+    <!-- Icon Divider-->
+    <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><fa-icon [icon]="faChartBar"></fa-icon></div>
+        <div class="divider-custom-line"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5 ms-auto text-center">
+            <p class="skills-lead" *ngFor="let skill of skills.col1">{{ skill.name }}:  <fa-icon [icon]="faStar" *ngFor="let i of [].constructor(skill.score)"></fa-icon><fa-icon [icon]="faStar" style="opacity: 0.4;" *ngFor="let i of [].constructor(5-skill.score)"></fa-icon></p>
+        </div>
+        <div class="col-lg-5 me-auto text-center">
+            <p class="skills-lead" *ngFor="let skill of skills.col2">{{ skill.name }}:  <fa-icon [icon]="faStar" *ngFor="let i of [].constructor(skill.score)"></fa-icon><fa-icon [icon]="faStar" style="opacity: 0.4;" *ngFor="let i of [].constructor(5-skill.score)"></fa-icon></p>    
+        </div>
+    </div>
+</div>

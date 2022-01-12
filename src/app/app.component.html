@@ -52,7 +52,7 @@
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Experience</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Experience & Education</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -63,20 +63,20 @@
                 <div class="row justify-content-center">
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" (click)="modalService.open(modal1)">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><fa-icon [icon]="faPlus"></fa-icon></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/up.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><fa-icon [icon]="faPlus"></fa-icon></div>
                             </div>
                             <img class="img-fluid" src="assets/img/portfolio/att.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" (click)="openUPModal()">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><fa-icon [icon]="faPlus"></fa-icon></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/up.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -85,7 +85,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><fa-icon [icon]="faPlus"></fa-icon></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/st.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/podium.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 4-->
@@ -112,7 +112,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><fa-icon [icon]="faPlus"></fa-icon></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/st.png" alt="..." />
                         </div>
                     </div>
                 </div>
@@ -120,21 +120,7 @@
         </section>
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Skills</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><fa-icon [icon]="faChartBar"></fa-icon></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Angular:  <fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon></p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                </div>
-            </div>
+            <app-skills-section></app-skills-section>
         </section>
         <!-- Contact Section-->
         <section class="page-section" id="contact">
@@ -220,7 +206,7 @@
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Connect With Me</h4>
+                        <h4 class="text-uppercase mb-4">Connect</h4>
                         <!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><fa-icon [icon]="faFacebook"></fa-icon></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><fa-icon [icon]="faTwitter"></fa-icon></a> -->
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/jakebeinart/"><fa-icon [icon]="faLinkedin"></fa-icon></a>
@@ -228,11 +214,9 @@
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <h4 class="text-uppercase mb-4">Section</h4>
                         <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
+                            Put something here.
                         </p>
                     </div>
                 </div>
@@ -242,31 +226,6 @@
         <div class="copyright py-4 text-center text-white">
             <div class="container"><small>Copyright &copy; Jake Beinart 2021</small></div>
         </div>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <ng-template #modal1 let-modal>
-          <div class="modal-header border-0"><button class="btn-close" (click)="modal.dismiss()"></button></div>
-          <div class="modal-body text-center pb-5">
-              <div class="container">
-                  <div class="row justify-content-center">
-                      <div class="col-lg-8">
-                          <!-- Portfolio Modal - Title-->
-                          <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Union Pacific Railroad</h2>
-                          <!-- Icon Divider-->
-                          <div class="divider-custom">
-                              <div class="divider-custom-line"></div>
-                              <div class="divider-custom-icon"><fa-icon [icon]="faStar"></fa-icon></div>
-                              <div class="divider-custom-line"></div>
-                          </div>
-                          <!-- Portfolio Modal - Image-->
-                          <img class="img-fluid rounded mb-5" src="assets/img/portfolio/up.png" alt="..." />
-                          <!-- Portfolio Modal - Text-->
-                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </ng-template>
         
         <!-- Portfolio Modal 2-->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
@@ -414,7 +373,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/podium.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">

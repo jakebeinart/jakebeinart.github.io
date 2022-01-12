@@ -1,31 +1,16 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { NONE_TYPE } from '@angular/compiler';
 import { Component } from '@angular/core';
-import { faFacebook, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faBookOpen, faChartBar, faDownload, faPlus, faStar, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faGithub, faJava, faLinkedin, faPython, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faBookOpen, faChartBar, faDownload, faMicrochip, faPlus, faStar, faTimes, faTrain } from '@fortawesome/free-solid-svg-icons';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UnionPacificModalComponent } from './modals/union-pacific-modal/union-pacific-modal.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  // animations: [
-  //   trigger('openClose', [
-  //     // ...
-  //     state('open', style({
-  //       display: 'flex'
-  //     })),
-  //     state('closed', style({
-  //       display: 'none'
-  //     })),
-  //     transition('open => closed', [
-  //       animate('1s')
-  //     ]),
-  //     transition('closed => open', [
-  //       animate('0.5s')
-  //     ]),
-  //   ]),
-  // ]
+
 })
 export class AppComponent {
   title = 'jake-beinart-site';
@@ -40,12 +25,14 @@ export class AppComponent {
   faGithub = faGithub;
   faBookOpen = faBookOpen;
   faChartBar = faChartBar;
+
+  UnionPacificModalComponent = UnionPacificModalComponent;
+
   navMenuOpen = false;
 
   constructor(public modalService: NgbModal){}
 
-  toggleNavMenu(){
-    console.log(!this.navMenuOpen);
-    this.navMenuOpen = !this.navMenuOpen;
+  openUPModal(){
+    this.modalService.open(UnionPacificModalComponent, {size: 'xl'});
   }
 }

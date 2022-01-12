@@ -4,10 +4,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
+import { SkillsSectionComponent } from './skills-section/skills-section.component';
+import { UnionPacificModalComponent } from './modals/union-pacific-modal/union-pacific-modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SkillsSectionComponent,
+    UnionPacificModalComponent
   ],
   imports: [
     BrowserModule,

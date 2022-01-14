@@ -1,6 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { NONE_TYPE } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { faFacebook, faGithub, faJava, faLinkedin, faPython, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faBookOpen, faChartBar, faDownload, faMicrochip, faPlus, faStar, faTimes, faTrain } from '@fortawesome/free-solid-svg-icons';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -26,13 +26,25 @@ export class AppComponent {
   faBookOpen = faBookOpen;
   faChartBar = faChartBar;
 
+  isCollapsed = true;
+  navbarShrink = false;
+
   UnionPacificModalComponent = UnionPacificModalComponent;
 
   navMenuOpen = false;
 
   constructor(public modalService: NgbModal){}
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.scrollY > 0) {
+      this.navbarShrink = true;
+    }else{
+      this.navbarShrink = false;
+    }
+  }
+
   openUPModal(){
-    this.modalService.open(UnionPacificModalComponent, {size: 'xl'});
+    this.modalService.open(UnionPacificModalComponent, {size: 'lg'});
   }
 }

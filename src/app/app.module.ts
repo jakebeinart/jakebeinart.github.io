@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { UnionPacificModalComponent } from './modals/union-pacific-modal/union-pacific-modal.component';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UnionPacificModalComponent } from './modals/union-pacific-modal/union-p
     BrowserModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    NgbCollapseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

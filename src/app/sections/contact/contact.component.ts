@@ -10,5 +10,10 @@ export class ContactComponent implements OnInit {
   faStar = faStar;
   constructor() {}
 
+  /*
+  Look into this for free BE solution: http://enformed.io/
+  Maybe consider captcha too
+  */
+
   ngOnInit(): void {}
 }

@@ -4,22 +4,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
-import { SkillsSectionComponent } from './skills-section/skills-section.component';
+import { SkillsComponent } from './sections/skills/skills.component';
 import { UnionPacificModalComponent } from './modals/union-pacific-modal/union-pacific-modal.component';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { AttModalComponent } from './modals/att-modal/att-modal.component';
 import { MstModalComponent } from './modals/mst-modal/mst-modal.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { MastheadComponent } from './masthead/masthead.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
-import { CopyrightComponent } from './copyright/copyright.component';
+import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
+import { MastheadComponent } from './sections/masthead/masthead.component';
+import { ExperienceComponent } from './sections/experience/experience.component';
+import { ContactComponent } from './sections/contact/contact.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { CopyrightComponent } from './layout/copyright/copyright.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkillsSectionComponent,
+    SkillsComponent,
     UnionPacificModalComponent,
     AttModalComponent,
     MstModalComponent,
@@ -28,7 +28,7 @@ import { CopyrightComponent } from './copyright/copyright.component';
     ExperienceComponent,
     ContactComponent,
     FooterComponent,
-    CopyrightComponent
+    CopyrightComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +37,6 @@ import { CopyrightComponent } from './copyright/copyright.component';
     NgbCollapseModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

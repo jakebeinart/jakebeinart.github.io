@@ -1,20 +1,42 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { NONE_TYPE } from '@angular/compiler';
 import { Component, HostListener } from '@angular/core';
-import { faFacebook, faGithub, faJava, faLinkedin, faPython, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faBookOpen, faChartBar, faDownload, faMicrochip, faPlus, faStar, faTimes, faTrain } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebook,
+  faGithub,
+  faJava,
+  faLinkedin,
+  faPython,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faBars,
+  faBookOpen,
+  faChartBar,
+  faDownload,
+  faMicrochip,
+  faPlus,
+  faStar,
+  faTimes,
+  faTrain,
+} from '@fortawesome/free-solid-svg-icons';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AttModalComponent } from './modals/att-modal/att-modal.component';
+import { MstModalComponent } from './modals/mst-modal/mst-modal.component';
 import { UnionPacificModalComponent } from './modals/union-pacific-modal/union-pacific-modal.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-
 })
 export class AppComponent {
-  title = 'jake-beinart-site';
-  faBars = faBars;
   faStar = faStar;
   faPlus = faPlus;
   faDownload = faDownload;
@@ -26,25 +48,17 @@ export class AppComponent {
   faBookOpen = faBookOpen;
   faChartBar = faChartBar;
 
-  isCollapsed = true;
-  navbarShrink = false;
-
   UnionPacificModalComponent = UnionPacificModalComponent;
 
-  navMenuOpen = false;
+  constructor(public modalService: NgbModal) {}
 
-  constructor(public modalService: NgbModal){}
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    if (window.scrollY > 0) {
-      this.navbarShrink = true;
-    }else{
-      this.navbarShrink = false;
-    }
+  openUPModal() {
+    this.modalService.open(UnionPacificModalComponent, { size: 'lg' });
   }
-
-  openUPModal(){
-    this.modalService.open(UnionPacificModalComponent, {size: 'lg'});
+  openATTModal() {
+    this.modalService.open(AttModalComponent, { size: 'lg' });
+  }
+  openMSTModal() {
+    this.modalService.open(MstModalComponent, { size: 'lg' });
   }
 }

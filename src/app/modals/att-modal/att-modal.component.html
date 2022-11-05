@@ -1,47 +1,74 @@
-<div class="modal-header border-0"><button class="btn-close" (click)="activeModal.dismiss()"></button></div>
+<div class="modal-header border-0">
+  <button class="btn-close" (click)="activeModal.dismiss()"></button>
+</div>
 <div class="modal-body pb-5">
-    <div class="container">
-        <div class="justify-content-center">
-                <!-- Title-->
-                <h2 class="portfolio-modal-title text-secondary text-center text-uppercase mb-0"><a href="https://www.att.com" target="_blank">AT&T</a></h2>
-                <h5 class="text-secondary text-center text-uppercase mb-0">St. Louis, MO</h5>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><fa-icon [icon]="faTruck"></fa-icon></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Experience Modal - Body-->
-                <div class="row text-left">
-                    <div class="col-lg-6">
-                        <div class="ms-3 mb-1">
-                            <h6 class="text-uppercase text-secondary mb-0">Senior - Software Engineer</h6>
-                            <h6 class="text-uppercase text-secondary mb-0"><span class="badge bg-secondary">Aug 2021 - Present</span></h6>
-                            <!-- <span class="text-muted font-italic mb-0">Python, Java, TwinCAT PLCs</span> -->
-                        </div>
-                        <ul class="mb-4">
-                            <li>Fleet stuff</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="ms-3">
-                            <h6 class="text-uppercase text-secondary">Sr Specialist - Software Engineer</h6>
-                            <h6 class="text-uppercase text-secondary"><span class="badge bg-secondary">Jun 2019 - Aug 2021</span></h6>
-                        </div>
-                        <ul class="mb-4">
-                            <li>Fleet stuff again</li>
-                        </ul>
-                    </div>                          
-                    <div class="col-lg-6">
-                        <div class="ms-3">
-                            <h6 class="text-uppercase text-secondary">Tech Development Program Engineer I</h6>
-                            <h6 class="text-uppercase text-secondary"><span class="badge bg-secondary">Jun 2018 - Jun 2019</span></h6>
-                        </div>
-                        <ul class="mb-4">
-                            <li>OKM stuff</li>
-                        </ul>
-                    </div>                          
-            </div>
+  <div class="container">
+    <div class="justify-content-center">
+      <!-- Title-->
+      <h2
+        class="portfolio-modal-title text-secondary text-center text-uppercase mb-0"
+      >
+        <a href="https://www.att.com" target="_blank">AT&T</a>
+      </h2>
+      <h5 class="text-secondary text-center text-uppercase mb-0">
+        St. Louis, MO
+      </h5>
+      <!-- Icon Divider-->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <fa-icon [icon]="faTruck"></fa-icon>
         </div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- Experience Modal - Body-->
+      <div class="row text-left mx-3">
+        <div class="col-lg-6">
+          <app-experience-section
+            class="mb-1"
+            title="Senior - Software Engineer"
+            [dates]="['Aug 2021 - Present']"
+          >
+            <ul class="mb-4">
+              <li class="mb-1">
+                Front-end lead for
+                <a
+                  href="https://avw-dev.att.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Fleet Vendor Web</a
+                >, a public-facing website where vendors can get paid for their
+                work on company vehicles
+              </li>
+              <li class="mb-1">
+                Spearheaded organization-wide campaign to create a common
+                Angular component library using company brand standards
+              </li>
+            </ul>
+          </app-experience-section>
+          <app-experience-section
+            title="Tech Development Program Engineer I & II"
+            [dates]="['Jun 2018 - Jun 2019']"
+          >
+            <ul class="mb-4">
+              <li>OKM stuff</li>
+            </ul>
+          </app-experience-section>
+        </div>
+        <div class="col-lg-6">
+          <div>
+            <h6 class="text-uppercase text-secondary">
+              Sr Specialist - Software Engineer
+            </h6>
+            <h6 class="text-uppercase text-secondary">
+              <span class="badge bg-secondary">Jun 2019 - Aug 2021</span>
+            </h6>
+          </div>
+          <ul class="mb-4">
+            <li>Fleet stuff again</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -50,15 +50,7 @@ export class AppComponent {
 
   UnionPacificModalComponent = UnionPacificModalComponent;
 
-  constructor(public modalService: NgbModal) {}
+  constructor() {}
 
-  openUPModal() {
-    this.modalService.open(UnionPacificModalComponent, { size: 'lg' });
-  }
-  openATTModal() {
-    this.modalService.open(AttModalComponent, { size: 'lg' });
-  }
-  openMSTModal() {
-    this.modalService.open(MstModalComponent, { size: 'lg' });
-  }
+
 }

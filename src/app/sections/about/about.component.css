@@ -1,0 +1,7 @@
+.propic {
+  transition: transform 0.2s ease;
+}
+
+.propic:hover {
+  transform: scale(1.02);
+}

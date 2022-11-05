@@ -16,6 +16,7 @@ import { ContactComponent } from './sections/contact/contact.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CopyrightComponent } from './layout/copyright/copyright.component';
 import { ExperienceSectionComponent } from './shared/experience-section/experience-section.component';
+import { AboutComponent } from './sections/about/about.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ExperienceSectionComponent } from './shared/experience-section/experien
     FooterComponent,
     CopyrightComponent,
     ExperienceSectionComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
